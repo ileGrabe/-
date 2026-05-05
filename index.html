@@ -1,0 +1,35 @@
+---
+layout: default
+title: 首页
+---
+
+<div class="post-list">
+    {% for post in paginator.posts %}
+    <!-- 单篇随笔卡片（和你截图里的结构1:1对应） -->
+    <div class="post-card">
+        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <h2 class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <div class="post-excerpt">
+            {{ post.excerpt | strip_html }}
+        </div>
+        <div class="more-link">
+            <a href="{{ post.url | relative_url }}">More →</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- 分页（自动生成，和原站分页逻辑一致） -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">← 上一页</a>
+    {% endif %}
+    <span>第 {{ paginator.page }} 页 / 共 {{ paginator.total_pages }} 页</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">下一页 →</a>
+    {% endif %}
+</div>
+{% endif %}
