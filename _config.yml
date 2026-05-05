@@ -1,26 +1,18 @@
-# 网站基础配置
-title: 'le Grabe'
-email: 
-description: "le Grabe 的个人随笔，关于日常、思考与细碎情绪"
-baseurl: "" # 若部署在GitHub Pages根目录，留空；若为子目录，填写子目录名
-url: "https://ileGrabe.github.io" # 你的部署地址
-twitter_username: 
-github_username: ileGrabe
+# 网站基础配置（完全规范YAML语法，彻底解决mapping报错）
+title: 'ileGrabe'
+email: ''
+description: 'ileGrabe'
+baseurl: ''
+url: 'https://ileGrabe.github.io'
+github_username: 'ileGrabe'
 
-# Jekyll 配置
+# Jekyll 核心配置
 markdown: kramdown
-theme: minima # 基础主题，适配极简风格
+theme: minima
 plugins:
   - jekyll-paginate
   - jekyll-feed
 
-# 分页配置（复刻原站分页逻辑）
-paginate: 10 # 每页显示10篇随笔（与原站一致）
-paginate_path: "/blog/page/:num/"
-
-# 自定义颜色（普鲁士蓝 #003153）
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+# 分页配置（和原站一致，自动生成/page/2/分页）
+paginate: 10
+paginate_path: '/blog/page/:num/'
