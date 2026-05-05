@@ -1,0 +1,26 @@
+# 网站基础配置
+title:'île Grabe'
+email: 
+description: "île Grabe"
+baseurl: "" # 若部署在GitHub Pages根目录，留空；若为子目录，填写子目录名
+url: "https://ileGrabe.github.io" # 你的部署地址
+twitter_username: （可留空）
+github_username: ileGrabe
+
+# Jekyll 配置
+markdown: kramdown
+theme: minima # 基础主题，适配极简风格
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+
+# 分页配置（复刻原站分页逻辑）
+paginate: 10 # 每页显示10篇随笔（与原站一致）
+paginate_path: "/blog/page/:num/"
+
+# 自定义颜色（普鲁士蓝 #003153）
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
