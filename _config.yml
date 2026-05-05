@@ -1,10 +1,10 @@
 # 网站基础配置
-title:'île Grabe'
+title: 'le Grabe'
 email: 
-description: "île Grabe"
+description: "le Grabe 的个人随笔，关于日常、思考与细碎情绪"
 baseurl: "" # 若部署在GitHub Pages根目录，留空；若为子目录，填写子目录名
 url: "https://ileGrabe.github.io" # 你的部署地址
-twitter_username: （可留空）
+twitter_username: 
 github_username: ileGrabe
 
 # Jekyll 配置
